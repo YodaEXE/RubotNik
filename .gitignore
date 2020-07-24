@@ -6,5 +6,5 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-#config files
-config.ini
+#redis development db
+dump.rdb

@@ -5,3 +5,6 @@ __pycache__/
 
 #git
 .git/
+
+#redis development db
+dump.rdb
