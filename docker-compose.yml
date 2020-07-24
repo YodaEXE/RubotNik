@@ -2,17 +2,15 @@ version: '3.6'
 
 services:  
   app:
-    build:
-      context: ./
+    image: beatnick/rubotnik:latest
+    # build:
+    #   context: ./
     depends_on:
       - redis
     environment:
       - REDIS_HOST=redis
     ports:
       - "6739:6739"
-    ##Development##
-    #stdin_open: true
-    #tty: true
   redis:
     image: redis:alpine
     container_name: "redis"
