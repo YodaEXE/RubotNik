@@ -10,3 +10,8 @@ services:
   redis:
     image: redis:alpine
     container_name: "redis"
+    volumes:
+      - redisdb:/data
+
+volume:
+    - redisdb

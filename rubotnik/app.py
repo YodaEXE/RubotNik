@@ -4,7 +4,7 @@ from discord.ext.commands import Bot
 import os
 
 #initalize bot with desired prefix and load extensions
-bot = Bot(">")
+bot = Bot("!")
 bot.load_extension("cogs.redis")
 bot.load_extension("cogs.admin")
 bot.load_extension("cogs.utilities")
