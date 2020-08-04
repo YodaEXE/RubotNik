@@ -4,7 +4,7 @@ import asyncio
 import time
 
 #config
-VOTE_TIME = 15
+VOTE_TIME = 180
 VOTE_SYMBOL = ":duck:"
 
 #global list of active votes
