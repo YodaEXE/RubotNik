@@ -105,7 +105,7 @@ class Vote:
         #Set as valid vote, update results if error is discovered
         result = True
         if len(params) < 3:
-            result = "You need a minimum of a topic an two choices: !vote create Topic|x|y"
+            result = "You need a minimum of a topic an two choices: !votecreate Topic|x|y"
         elif channel_id in live_votes:
             result = "There is already a vote in progress for this channel."
         
@@ -131,7 +131,7 @@ class Voting(commands.Cog):
         
         #clean up voting options and send message of vote starting
         options = "".join(f"#{k} {v} \n" for k,v in new_vote.choices.items())
-        await ctx.send(f"Vote Started: {new_vote.topic} \n {options}")
+        await ctx.send(f"Vote Started: {new_vote.topic} \n {options}. Type !vote <number> to vote!")
 
         #start vote and await completion
         await new_vote.run()
